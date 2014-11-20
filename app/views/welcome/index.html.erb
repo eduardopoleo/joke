@@ -1,0 +1,29 @@
+<nav class="navbar navbar-fixed-top navbar-inverse " role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+        Comic <span class="glyphicon glyphicon-flash"></span>
+      </a>
+    </div>
+  </div>
+</nav>
+<div class="jumbotron text-center">
+  <h1>Welcome to Comic <span class="glyphicon glyphicon-flash"></span></h1>
+  <h3>Your will never use another font and your life will not be the same!</h3>
+  <div class="row">
+    <div class="col-lg-6 col-lg-offset-3">
+      <%= form_tag("/transform", method: "post") do %>
+        <div class="form-group">
+          <%= text_field_tag :dummy_text, nil, class: "form-control", placeholder: "Type a wish!"%>
+        </div>
+          <%= submit_tag "Transform my life", class: "btn btn-info" %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<div class ="row serious">
+  <div id="box" class="col-lg-6 col-lg-offset-3 text-center">
+    <h3 id="transform"><%= @super_text %></h3>  
+  </div>
+</div>
